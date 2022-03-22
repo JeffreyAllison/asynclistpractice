@@ -46,3 +46,56 @@ export function renderWater(water) {
   return waterEl;
 
 }
+
+export function renderTeas(tea) {
+  const teaEl = document.createElement('div');
+  const categoryEl = document.createElement('h2');
+  const nameEl = document.createElement('p');
+  const caffeinatedEl = document.createElement('p');
+  const flavorEl = document.createElement('p');
+
+  teaEl.classList.add('tea');
+
+  categoryEl.textContent = tea.category;
+  nameEl.textContent = tea.name;
+  caffeinatedEl.textContent = tea.caffeinated;
+  flavorEl.textContent = tea.flavor;
+
+  teaEl.append(
+    categoryEl,
+    nameEl,
+    caffeinatedEl,
+    flavorEl,
+  );
+
+  return teaEl;
+
+}
+
+export function renderInstruments(instrument) {
+  const instrumentEl = document.createElement('div');
+  const coolEl = document.createElement('p');
+  const categoryEl = document.createElement('h2');
+  const brandEl = document.createElement('p');
+  const priceEl = document.createElement('p');
+  const playersEl = document.createElement('p');
+
+  instrumentEl.classList.add('instrument');
+
+  coolEl.textContent = instrument.is_cool;
+  categoryEl.textContent = instrument.category;
+  brandEl.textContent = instrument.brand;
+  priceEl.textContent = instrument.price;
+  playersEl.textContent = instrument.famous_players;
+
+  instrumentEl.append(
+    categoryEl,
+    brandEl,
+    priceEl,
+    playersEl,
+    coolEl,
+  );
+
+  return instrumentEl;
+
+}

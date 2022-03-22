@@ -3,7 +3,7 @@ const SUPABASE_URL = 'https://lrbzhpldjrxqkjskcizc.supabase.co';
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-export async function getCandies() {
+export async function fetchAllCandies() {
   const response = await client
     .from('candies')
     .select('*');
@@ -11,9 +11,25 @@ export async function getCandies() {
   return response.body;
 }
 
-export async function getWaters() {
+export async function fetchAllWaters() {
   const response = await client
     .from('bodies_of_water')
+    .select('*');
+
+  return response.body;
+}
+
+export async function fetchAllTeas() {
+  const response = await client
+    .from('kinds_of_tea')
+    .select('*');
+
+  return response.body;
+}
+
+export async function fetchAllInstruments() {
+  const response = await client
+    .from('musical_instruments')
     .select('*');
 
   return response.body;
