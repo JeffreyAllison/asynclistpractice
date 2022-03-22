@@ -20,7 +20,6 @@ const candiesListEl = document.querySelector('.candies-list');
 async function fetchAndDisplayCandies() {
 
   const candies = await fetchAllCandies();
-
   for (let candy of candies) {
     const candyEl = renderCandy(candy);
     candiesListEl.append(candyEl);
