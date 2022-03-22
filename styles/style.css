@@ -51,6 +51,7 @@ section {
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
+    flex-direction: row;
 }
 
 header {
@@ -88,4 +89,31 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+.candies-list {
+
+flex-direction: column;
+flex-wrap: wrap;
+ box-shadow: 200px;
+ background-color: brown;
+}
+
+.candy {
+
+flex-direction: row;
+
+}
+
+.teas-list {
+  background-color: lightcoral;
+
+}
+
+.water-list {
+background-color: aquamarine;
+}
+
+.instruments-list {
+background-color: lime;
 }
