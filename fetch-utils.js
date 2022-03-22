@@ -10,3 +10,11 @@ export async function getCandies() {
 
   return response.body;
 }
+
+export async function getWaters() {
+  const response = await client
+    .from('bodies_of_water')
+    .select('*');
+
+  return response.body;
+}
